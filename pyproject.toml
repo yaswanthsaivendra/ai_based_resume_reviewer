@@ -9,8 +9,8 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.12"
 django = "^5.0.1"
-django-rest-framework = "^0.1.0"
 pypdf2 = "^3.0.1"
+django-compressor = "^4.4"
 
 
 [build-system]
