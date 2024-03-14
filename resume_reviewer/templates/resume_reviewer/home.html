@@ -1,0 +1,31 @@
+{% extends 'resume_reviewer/base.html' %}
+
+{% block content %}
+<div class="flex justify-center mt-24 text-white">
+    <form action="{% url 'home' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="border border-gray-500 flex flex-col p-6 rounded-lg min-w-96 mx-6">
+            <div class="mb-4">
+                <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="job_desc_input">Write
+                    the job description here</label>
+                <textarea placeholder=" Job description should be atleast more than 100 characters"
+                    class="block w-full text-sm border border-gray-300 rounded-sm bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                    id="job_desc_input" name="job_description" rows="4" cols="50"></textarea>
+            </div>
+            <div>
+                <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="file_input">Upload
+                    file</label>
+                <input
+                    class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                    aria-describedby="file_input_help" id="file_input" type="file" accept="application/pdf"
+                    name="resume">
+                <p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="file_input_help">format: PDF </p>
+            </div>
+
+            <div>
+                <button class="border border-gray-400 p-1 rounded-md mt-4 text-gray-900  dark:text-gray-400" type="submit">submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock content %}

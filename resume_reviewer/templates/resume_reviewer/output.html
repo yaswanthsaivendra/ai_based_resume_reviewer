@@ -1,0 +1,41 @@
+{% extends 'resume_reviewer/base.html' %}
+
+{% block content %}
+<div class="flex justify-center mt-24 text-white">
+    <div class="flex-col">
+        <div>
+            <h1>Name</h1>
+            {{resume_data.name}}
+        </div>
+        <div>
+            <h1>Relevant Skills</h1>
+            {{resume_data.relevant_skills}}
+        </div>
+        <div>
+            <h1>Summary</h1>
+            {{resume_data.summary}}
+        </div>
+        <div>
+            <h1>Education</h1>
+            {{resume_data.education}}
+        </div>
+        <div>
+            <h1>Company fit</h1>
+            {{resume_data.company_fit}}
+        </div>
+        <div>
+            <h1>Technical Skills</h1>
+            {{resume_data.technical_skills}}
+        </div>
+        <div>
+            <h1>Soft Skills</h1>
+            {{resume_data.Soft Skills}}
+        </div>
+        <div>
+            <h1>Projects</h1>
+            {{resume_data.projects}}
+        </div>
+
+    </div>
+</div>
+{% endblock content %}

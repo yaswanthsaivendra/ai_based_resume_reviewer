@@ -11,6 +11,8 @@ python = "^3.12"
 django = "^5.0.1"
 pypdf2 = "^3.0.1"
 django-compressor = "^4.4"
+openai = "^1.14.0"
+django-environ = "^0.11.2"
 
 
 [build-system]
